@@ -294,7 +294,8 @@ button{ font:inherit; }
 }
 
 .text-pane{
-  flex:0 0 0%;
+  flex:0 0 0;
+  min-height:0;
   width:0;
   overflow:hidden;
   opacity:0;
