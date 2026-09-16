@@ -232,8 +232,9 @@ button{ font:inherit; }
 
 .play-btn{
   position:absolute;
-  inset:0;
-  margin:auto;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
   width:62px;
   height:62px;
   border-radius:50%;
@@ -245,11 +246,11 @@ button{ font:inherit; }
   justify-content:center;
   transition:transform .15s ease, opacity .2s ease, background .15s ease;
 }
-.play-btn:hover{ background:var(--violet-ink); transform:scale(1.06); }
+.play-btn:hover{ background:var(--violet-ink); transform:translate(-50%,-50%) scale(1.06); }
 .play-btn.hidden{
   opacity:0;
   pointer-events:none;
-  transform:scale(.85);
+  transform:translate(-50%,-50%) scale(.85);
   display:flex !important;
 }
 .play-btn::after{
@@ -263,6 +264,7 @@ button{ font:inherit; }
 .play-btn.no-video{
   width:auto;
   height:auto;
+  white-space:nowrap;
   border-radius:3px;
   padding:.7rem 1.2rem;
   font-family:var(--display);
