@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>happy birthday, Nhien</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ENTRY SCREEN — this is now the first thing you see -->
+  <main class="stage" id="selectScreen">
+    <div class="stage-inner">
+
+      <h1 class="title">
+        happy birthday,
+        <span class="name">
+          Nhien
+          <svg class="scribble" viewBox="0 0 320 24" fill="none" aria-hidden="true" focusable="false">
+            <path d="M5 15C42 8 88 5 130 6c41 1 79 4 116 10" stroke-width="5" stroke-linecap="round"/>
+            <path d="M16 21c44-5 91-7 137-6 34 1 66 3 96 6" stroke-width="2.5" stroke-linecap="round" opacity=".45"/>
+          </svg>
+        </span>
+      </h1>
+
+      <p class="note">there's one thing in here. it's yours.</p>
+
+      <button class="card" id="selectBox">
+        <span class="card-label" id="selectBoxLabel"></span>
+        <span class="card-open">open it</span>
+      </button>
+
+    </div>
+  </main>
+
+  <!-- MODAL -->
+  <div id="modalOverlay" class="overlay">
+    <div class="modal-box" id="modalBox">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+
+      <div class="video-pane" id="videoPane">
+        <video id="birthdayVideo" playsinline></video>
+        <div class="video-placeholder hidden" id="videoPlaceholder">
+          <p id="placeholderText"></p>
+        </div>
+        <button class="play-btn" id="playBtn" aria-label="Play video"></button>
+      </div>
+
+      <div class="text-pane" id="textPane">
+        <div class="text-pane-inner" id="textPaneInner"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/config.js?v=3"></script>
+  <script src="js/main.js?v=3"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Site editor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+
+  <div class="admin-wrap">
+
+    <!-- PASSWORD GATE -->
+    <div class="admin-card" id="gate">
+      <h1>Site editor</h1>
+      <p class="admin-sub">Enter the password to edit the birthday page.</p>
+      <input type="password" id="pwInput" placeholder="Password" autocomplete="off">
+      <button class="admin-btn" id="pwSubmit">Unlock</button>
+      <p class="admin-error hidden" id="pwError">Wrong password. Try again.</p>
+    </div>
+
+    <!-- EDITOR PANEL -->
+    <div class="admin-card admin-panel hidden" id="panel">
+      <h1>Edit the page</h1>
+      <p class="admin-sub">Fill this in, hit generate, then paste the result into <code>js/config.js</code>.</p>
+
+      <label class="toggle-row">
+        <span>Show the video</span>
+        <input type="checkbox" id="videoEnabled" checked>
+      </label>
+
+      <div id="videoFields">
+        <label>Video folder
+          <input type="text" id="videoFolder" value="media/">
+        </label>
+
+        <label>Video file name
+          <input type="text" id="videoName" value="birthday 2026.mp4">
+        </label>
+      </div>
+
+      <label id="placeholderField" class="hidden">Note shown instead of the video
+        <textarea id="placeholderMessage" rows="3">due to a problem on my side, i couldn't add a video :( but hopefully next time i can :)</textarea>
+      </label>
+
+      <label>Card text (front page)
+        <input type="text" id="boxLabel" value="Birthday of 2026 To Nhien">
+      </label>
+
+      <label>The letter
+        <textarea id="scriptText" rows="10"></textarea>
+      </label>
+
+      <button class="admin-btn" id="generateBtn">Generate code</button>
+
+      <div id="outputWrap" class="hidden">
+        <p class="admin-sub">Copy everything below and paste it over the <code>SITE_CONFIG</code> object in <code>js/config.js</code>:</p>
+        <pre id="output"></pre>
+        <button class="admin-btn admin-btn-secondary" id="copyBtn">Copy code</button>
+        <p class="admin-note" id="copyNote"></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
