@@ -339,12 +339,11 @@ button{ font:inherit; }
   .modal-box.expanded{
     flex-direction:column;
     width:min(94vw, 470px);
-    max-height:86vh;
-    overflow-y:auto;
+    max-height:90vh;
   }
-  .modal-box.expanded .video-pane{ flex-basis:auto; }
-  .modal-box.expanded .text-pane{ width:auto; flex:1 1 auto; }
-  .text-pane-inner{ max-height:none; }
+  .modal-box.expanded .video-pane{ flex:0 0 auto; }
+  .modal-box.expanded .text-pane{ width:auto; flex:1 1 auto; min-height:0; }
+  .text-pane-inner{ max-height:min(48vh, 380px); }
 }
 
 @media (prefers-reduced-motion: reduce){
